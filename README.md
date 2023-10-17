@@ -40,7 +40,7 @@ conda activate et-estimation
 
 ## Run
 <p align="justify"> 
-To run the best-performing SAR2ET model (trained with SAR, ERA5, and DEM), simply call the ```predict_et.py``` script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model.
+To run the best-performing SAR2ET model (trained with SAR, ERA5, and DEM), simply call the predict_et.py script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model as script arguments.
 </p> 
 
 ```
@@ -52,7 +52,8 @@ python predict_et.py \
     --device=<device-to-use-for-inference>
 ```
 
-An example run would be:
+Some test examples from the dataset are placed under ```data/tensors/``` directory. ```data/figs/``` directory also contains corresponding visualizations of these test examples. 
+An example run using these examples data would be:
 ```
 python predict_et.py \
     --pretrained_model WORKDIR/sar-based-et-estimation/models/et-estimator.pt \
