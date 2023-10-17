@@ -10,11 +10,11 @@ We developed multiple SAR2ET models that are trained with different combinations
 
 
 ## Getting Started
-Please follow the steps below to install and run the best-performing SAR-based ET estimation model.
+Please follow the steps below to install and run the best-performing SAR2ET model.
 
 ### System requirements
 <p align="justify"> 
-SAR-based ET estimation models are built and tested on an Ubuntu 20.04 environment with a single GPU of NVIDIA GeForce RTX 3090 Ti on the CUDA 12.0 platform using PyTorch 2.0.1.
+SAR2ET models are built and tested on a Ubuntu 20.04 environment with a single GPU of NVIDIA GeForce RTX 3090 Ti on the CUDA 12.0 platform using PyTorch 2.0.1.
 </p>
 
 
@@ -40,7 +40,7 @@ conda activate et-estimation
 
 ## Run
 <p align="justify"> 
-To run the best-performing SAR-based ET estimation model (trained with SAR, ERA5, and DEM), simply call the ```predict_et.py``` script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model.
+To run the best-performing SAR2ET model (trained with SAR, ERA5, and DEM), simply call the ```predict_et.py``` script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model.
 </p> 
 
 ```
