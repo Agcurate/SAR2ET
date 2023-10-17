@@ -1,6 +1,6 @@
 # sar-based-et-estimation
 
-### Introduction
+## Introduction
 <p align="justify"> 
 We developed multiple SAR2ET models that are trained with different combinations of various static (topographical and soil texture data) and dynamic (meteorological data and soil moisture) data along with the SAR. These secondary data sources were incorporated during the SAR2ET model training and had a significant impact on improving ET estimation performance when combined with SAR. The resulting SAR2ET approach is summarized as an illustration in the figure below.
 </p>
@@ -8,13 +8,17 @@ We developed multiple SAR2ET models that are trained with different combinations
   <img src="figures/figure02_intro.png" width="680">
 </p>
 
+
+## Getting Started
+Please follow the steps below to install and run the best-performing SAR-based ET estimation model.
+
 ### System requirements
 <p align="justify"> 
 SAR-based ET estimation models are built and tested on an Ubuntu 20.04 environment with a single GPU of NVIDIA GeForce RTX 3090 Ti on the CUDA 12.0 platform using PyTorch 2.0.1.
 </p>
 
-### Installation
 
+### Installation
 1. Clone the repository to your local.
 ```
 git clone https://github.com/cetinsamet/sar-based-et-estimation.git
@@ -32,10 +36,13 @@ conda env create -f environment.yml
 conda activate sar-based-et-estimation
 ```
 
-### Run
+3. Retrieve the pretrained model weights and place it under ```models/``` directory.
+
+## Run
 <p align="justify"> 
 To run the best-performing SAR-based ET estimation model (trained with SAR, ERA5, and DEM), simply call the ```predict_et.py``` script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model.
 </p> 
+
 ```
 python predict_et.py \
     --pretrained_model=<path-to-pretrained-model-weights> \
@@ -55,11 +62,13 @@ python predict_et.py \
     --device cuda
 ```
 
-### Results
+## Results
 
 <p align="justify"> 
 We thoroughly evaluate various SAR2ET models that estimate ET using different combinations of static and dynamic data sources. We analyze seasonal and regional differences by evaluating these models across different study areas to identify any regional disparities and analyze R2 scores on a monthly basis for the year 2021. We use tables to provide a detailed comparison of the models, highlighting their strengths and weaknesses, and showing the impact of different data sources on ET estimation accuracy. We also provide qualitative results to further examine the models’ performance.
 </p>
+
+### Quantitative results
 
 <p align="justify"> 
 Table 2 shows the performance metrics of various SAR2ET models that are trained using different combinations of static and dynamic data sources, on the test set. 
@@ -96,6 +105,18 @@ Initially, the SAR model exhibits moderate accuracy in estimating ET, with R2 sc
 </p>
 <p align="center">
   <img src="tables/table04_r2_by_regions.png" width="680">
+</p>
+
+### Qualitative results
+<p align="justify">
+The below figures illustrate the comparison between ground truth ET and predicted ETs made by different SAR-based ET estimations.
+The figures suggest that the SAR2ET model, which harnesses the synergy of meteorological data, topographical features, and SAR, emerges as the most robust and accurate predictor of ET.
+This combined approach allows the model to effectively capture micro-seasonal weather patterns and local topographical structures. 
+Consequently, it consistently delivers ET predictions that closely align with the target values. 
+</p>
+
+<p align="center">
+  <img src="figures/figure04_qualitative_results.png " width="680">
 </p>
 
 ### Acknowledgements
