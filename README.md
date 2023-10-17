@@ -33,10 +33,10 @@ cd sar-based-et-estimation
 conda env create -f environment.yml
 
 # activate conda environment
-conda activate sar-based-et-estimation
+conda activate et-estimation
 ```
 
-3. Retrieve the pretrained model weights and place it under ```models/``` directory.
+3. Retrieve the pre-trained model weights file and place it under ```models/``` directory.
 
 ## Run
 <p align="justify"> 
