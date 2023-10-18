@@ -40,7 +40,7 @@ conda activate et-estimation
 
 ## Run
 <p align="justify"> 
-To run the best-performing SAR2ET model (trained with SAR, ERA5, and DEM), simply call the predict_et.py script by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model as script arguments.
+To run the best-performing SAR2ET model (trained with SAR, ERA5, and DEM), simply call the <code>predict_et.py</code> by providing the file path to the pre-trained model weights, file paths to the model input tensors (SAR, ERA5, and DEM tensors) and the type of device (cpu/cuda) to run the model as script arguments.
 </p> 
 
 ```
@@ -52,8 +52,11 @@ python predict_et.py \
     --device=<device-to-use-for-inference>
 ```
 
-Some test examples from the dataset are placed under ```data/tensors/``` directory. ```data/figs/``` directory also contains corresponding visualizations of these test examples. 
+<p align="justify"> 
+Some test examples from the dataset are placed under <code>data/tensors/</code> directory. <code>data/figs/</code> directory also contains corresponding visualizations of these test examples. 
 An example run using these examples data would be:
+</p>
+
 ```
 python predict_et.py \
     --pretrained_model WORKDIR/sar-based-et-estimation/models/et-estimator.pt \
@@ -62,6 +65,10 @@ python predict_et.py \
     --dem_tensor WORKDIR/sar-based-et-estimation/data/tensors/dem/dem_0001.pt \
     --device cuda
 ```
+
+<p align="justify"> 
+After the execution of the example above, two outputs are expected to be saved; (1) an <code>et_pred.pt</code> file containing the tensor representation of the predicted ET, with a shape (1, 1, 128, 128), for the provided pre-trained model and input tensors, and (2) an <code>et_pred.png</code> file that represents the visualization of the predicted ET patch.
+</p>
 
 ## Results
 
@@ -78,6 +85,7 @@ However, as auxiliary static and dynamic data sources are added to the models, t
 The best model in this comparison incorporates SAR, ERA5, and DEM data, achieving an outstanding MSE of 0.46, an MAE of 0.49, and a R2 of 0.82 (a 19-point improvement over the baseline). 
 This underscores the synergistic benefits of combining both static and dynamic data sources and emphasizes the importance of integrating SAR, DEM, and ERA5 data to enhance the accuracy of SAR2ET models for estimating ET.
 </p>
+
 <p align="center">
   <img src="tables/table02_overall_results.png" width="680">
 </p>
@@ -91,6 +99,7 @@ The model trained with SAR, ERA5, and DEM data consistently outperforms others, 
 This demonstrates that combining SAR with dynamic (meteorological) and static (topographical) data significantly enhances the model’s ability to estimate ET throughout the year.
 Overall, the table illustrates the importance of data integration in SAR2ET modeling and highlights how the accuracy of ET estimation varies by month, with SAR-based models becoming more effective in capturing ET dynamics during the warmer months of the year when water-related processes are more active. 	
 </p>
+
 <p align="center">
   <img src="tables/table03_r2_by_months.png" width="680">
 </p>
@@ -104,6 +113,7 @@ Initially, the SAR model exhibits moderate accuracy in estimating ET, with R2 sc
   These values represent a significant improvement of 15 and 21 points over the baseline and indicate a robust correlation between model predictions and observed ET data. 
   These findings emphasize the importance of combining topographical data (DEM) and meteorological data (ERA5) in SAR-based ET estimation, especially in areas where these variables significantly influence ET dynamics. 
 </p>
+
 <p align="center">
   <img src="tables/table04_r2_by_regions.png" width="680">
 </p>
