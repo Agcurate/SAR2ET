@@ -54,15 +54,15 @@ python predict_et.py \
 
 <p align="justify"> 
 Some test examples from the dataset are placed under <code>data/tensors/</code> directory. <code>data/images/</code> directory also contains corresponding visualizations of these test examples. 
-An example run using these examples data would be:
+An example run using these data examples would be:
 </p>
 
 ```
 python predict_et.py \
     --pretrained_model WORKDIR/sar-based-et-estimation/models/et-estimator.pt \
-    --s1_tensor WORKDIR/sar-based-et-estimation/data/tensors/s1/s1_0001.pt \
-    --era5_tensor WORKDIR/sar-based-et-estimation/data/tensors/era5/era5_0001.pt \
-    --dem_tensor WORKDIR/sar-based-et-estimation/data/tensors/dem/dem_0001.pt \
+    --s1_tensor WORKDIR/sar-based-et-estimation/data/tensors/s1/s1_0008.pt \
+    --era5_tensor WORKDIR/sar-based-et-estimation/data/tensors/era5/era5_0008.pt \
+    --dem_tensor WORKDIR/sar-based-et-estimation/data/tensors/dem/dem_0008.pt \
     --device cuda
 ```
 
