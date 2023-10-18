@@ -53,7 +53,7 @@ python predict_et.py \
 ```
 
 <p align="justify"> 
-Some test examples from the dataset are placed under <code>data/tensors/</code> directory. <code>data/figs/</code> directory also contains corresponding visualizations of these test examples. 
+Some test examples from the dataset are placed under <code>data/tensors/</code> directory. <code>data/images/</code> directory also contains corresponding visualizations of these test examples. 
 An example run using these examples data would be:
 </p>
 
@@ -69,6 +69,11 @@ python predict_et.py \
 <p align="justify"> 
 After the execution of the example above, two outputs are expected to be saved; (1) an <code>et_pred.pt</code> file containing the tensor representation of the predicted ET, with a shape (1, 1, 128, 128), for the provided pre-trained model and input tensors, and (2) an <code>et_pred.png</code> file that represents the visualization of the predicted ET patch.
 </p>
+
+<p align="justify"> 
+For a simple, interactive, and end-to-end example of the inference procedure of the best-performing SAR2ET model, please see the Jupyter notebook example placed under <code>src/example</code> directory.
+</p>
+
 
 ## Results
 
