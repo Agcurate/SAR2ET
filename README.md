@@ -1,5 +1,5 @@
 # sar-based-et-estimation
-
+#BERK
 ## Introduction
 <p align="justify"> 
 We developed multiple SAR2ET models that are trained with different combinations of various static (topographical and soil texture data) and dynamic (meteorological data and soil moisture) data along with the SAR. These secondary data sources were incorporated during the SAR2ET model training and had a significant impact on improving ET estimation performance when combined with SAR. The resulting SAR2ET approach is summarized as an illustration in the figure below.
