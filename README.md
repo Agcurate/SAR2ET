@@ -1,5 +1,4 @@
 # sar-based-et-estimation
-#BERK
 ## Introduction
 <p align="justify"> 
 We developed multiple SAR2ET models that are trained with different combinations of various static (topographical and soil texture data) and dynamic (meteorological data and soil moisture) data along with the SAR. These secondary data sources were incorporated during the SAR2ET model training and had a significant impact on improving ET estimation performance when combined with SAR. The resulting SAR2ET approach is summarized as an illustration in the figure below.
@@ -139,3 +138,7 @@ Consequently, it consistently delivers ET predictions that closely align with th
 <p align="justify"> 
 This project entitled ”Improving Resiliency of Malian Farmers with Yield Estimation: IMPRESSYIELD” was funded by the Climate Change AI Innovation Grants program, hosted by Climate Change AI with the additional support of the Canada Hub of Future Earth.
 </p> 
+=======
+# Impressyield
+A joint participation project led by Agcurate in collaboration with Middle East Technical University and Istanbul Technical University, funded by CCAI.
+
